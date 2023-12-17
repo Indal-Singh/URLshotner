@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        #url-shortener {
+            width:60%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        #url-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #shorten-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #shortened-url {
+            margin-top: 20px;
+            word-break: break-all;
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<div id="url-shortener">
+    <h2>URL Shortener</h2>
+    <form action="/url" method="post">
+        <input type="url" id="url-input" name="url" placeholder="Enter your URL...">
+        <button id="shorten-btn" type="submit">Shorten URL</button>
+    </form>
+    <p id="shortened-url"></p>
+</div>
+</body>
+</html>
